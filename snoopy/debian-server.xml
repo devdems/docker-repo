@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Debian-Server</Name>
+  <Beta>False</Beta>
+  <Category>Productivity:</Category>
+  <Date>2016-01-02</Date>
+  <Support>Nil</Support>
+  <Overview>Debian Server Build</Overview>
+  <Description>Output folder is /home/ubuntu/unraid. user/password is ubuntu:PASSWD (case sensitive).[br] Once you have logged in and as long as you don't logout again you can resume a session by selecting it from the login dropdown.</Description>
+  <Registry>https://hub.docker.com/_/debian/</Registry>
+  <Repository></Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name></Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+        <Port>
+        <HostPort>3389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+   <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/debian/.config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+      <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/debian/unraid</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Banner>Nil</Banner>
+  <Icon>http://findicons.com/icon/download/232607/debian_logo/64/png</Icon>
+</Container>
