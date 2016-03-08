@@ -23,7 +23,7 @@
    <Volume>
       <HostDir></HostDir>
       <ContainerDir>/pictures</ContainerDir>
-      <Mode>rw</Mode>
+      <Mode>r</Mode>
     </Volume>
       <Volume>
       <HostDir></HostDir>
