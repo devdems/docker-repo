@@ -58,6 +58,11 @@
       <ContainerDir>/var/lib/phptimeseries</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+	<Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/var/www/emoncms</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:8998]/</WebUI>
   <Banner>http://emoncms.org/Modules/site/emoncms_front.png</Banner>
