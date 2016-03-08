@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
   <Name>Flickr-uploader</Name>
-  <Beta>True</Beta>
+  <Beta>False</Beta>
   <Category>Productivity:</Category>
   <Date>2015-10-24</Date>
   <Overview>Upload pictures to flicker</Overview>
