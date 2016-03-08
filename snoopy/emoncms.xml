@@ -60,7 +60,7 @@
     </Volume>
 	<Volume>
       <HostDir></HostDir>
-      <ContainerDir>/var/www/emoncms</ContainerDir>
+      <ContainerDir>/var/www/html</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
