@@ -12,8 +12,8 @@
   <Privileged>false</Privileged>
   <Environment>
     <Variable>
-      <Name></Name>
-      <Value></Value>
+      <Name>PYTHONUNBUFFERED</Name>
+      <Value>0</Value>
     </Variable>
   </Environment>
   <Networking>
