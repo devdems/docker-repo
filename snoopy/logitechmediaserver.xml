@@ -31,6 +31,11 @@
         <ContainerPort>3483</ContainerPort>
         <Protocol>udp</Protocol>
       </Port>
+	  <Port>
+        <HostPort>5353</HostPort>
+        <ContainerPort>5353</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
       <Port>
         <HostPort>9000</HostPort>
         <ContainerPort>9000</ContainerPort>
@@ -52,11 +57,6 @@
     <Volume>
       <HostDir></HostDir>
       <ContainerDir>/music</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-	 <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/etc/avahi</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
