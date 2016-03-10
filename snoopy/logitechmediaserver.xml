@@ -54,6 +54,11 @@
       <ContainerDir>/music</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+	 <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/etc/avahi</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <Version></Version>
   <WebUI>http://[IP]:[PORT:9000]/</WebUI>
