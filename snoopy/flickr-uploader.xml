@@ -3,7 +3,7 @@
   <Name>Flickr-uploader</Name>
   <Beta>False</Beta>
   <Category>Productivity:</Category>
-  <Date>2015-10-24</Date>
+  <Date>2016-05-27</Date>
   <Overview>Upload pictures to flicker</Overview>
   <Description></Description>
   <Registry>https://registry.hub.docker.com/u/snoopy86/flickr-uploader</Registry>
