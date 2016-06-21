@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
 <Beta>False</Beta>
-<Date>2016-05-27</Date>
+<Date>2016-06-21</Date>
 <Category>MediaServer:Music</Category>
   <Name>LogitechMediaServer</Name>
   <Overview>
@@ -61,6 +61,11 @@
     <Volume>
       <HostDir></HostDir>
       <ContainerDir>/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+	<Volume>
+      <HostDir>/var/run/dbus</HostDir>
+      <ContainerDir>/var/run/dbus</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
