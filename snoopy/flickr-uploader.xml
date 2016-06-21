@@ -8,6 +8,9 @@
   <Description></Description>
   <Registry>https://registry.hub.docker.com/u/snoopy86/flickr-uploader</Registry>
   <Repository>snoopy86/flickr-uploader</Repository>
+  <DonateText>Buy me a beer.</DonateText>
+  <DonateImg>https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif</DonateImg>
+  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GSRTR79H7Q47J</DonateLink>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
