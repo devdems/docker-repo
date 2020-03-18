@@ -7,8 +7,8 @@
   <Support>http://lime-technology.com/forum/index.php?topic=43610.0</Support>
   <Overview>Energy monitor</Overview>
   <Description></Description>
-  <Registry>https://registry.hub.docker.com/u/snoopy86/emoncms-docker</Registry>
-  <Repository>snoopy86/emoncms-docker</Repository>
+  <Registry>https://registry.hub.docker.com/u/openenergymonitor/emoncms</Registry>
+  <Repository>openenergymonitor/emoncms</Repository>
   <DonateText>Buy me a beer.</DonateText>
   <DonateImg>https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif</DonateImg>
   <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GSRTR79H7Q47J</DonateLink>
@@ -25,7 +25,7 @@
 	<Publish>
 	  <Port>
         <HostPort>8998</HostPort>
-        <ContainerPort>80</ContainerPort>
+        <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
 	  <Port>
@@ -36,34 +36,24 @@
     </Publish>
   </Networking>
   <Data>
-	<Volume>
-      <HostDir></HostDir>
+    <Volume>
+      <HostDir>/mnt/user/appdata/emoncms/mysql</HostDir>
       <ContainerDir>/etc/mysql</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-	<Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/var/lib/mysql</ContainerDir>
+    <Volume>
+      <HostDir>/mnt/user/appdata/emoncms/www</HostDir>
+      <ContainerDir>/var/www</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-	<Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/var/lib/phpfiwa</ContainerDir>
+    <Volume>
+      <HostDir>/mnt/user/appdata/emoncms/log</HostDir>
+      <ContainerDir>/var/log</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-	<Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/var/lib/phpfina</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-	<Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/var/lib/phptimeseries</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-	<Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/var/www/html</ContainerDir>
+    <Volume>
+      <HostDir>/mnt/user/appdata/emoncms/emoncms</HostDir>
+      <ContainerDir>/var/opt/emoncms</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
