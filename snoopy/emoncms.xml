@@ -38,22 +38,22 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/emoncms/mysql</HostDir>
-      <ContainerDir>/etc/mysql</ContainerDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/emoncms/www</HostDir>
-      <ContainerDir>/var/www</ContainerDir>
+      <HostDir>/mnt/user/appdata/emoncms/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/emoncms/log</HostDir>
-      <ContainerDir>/var/log</ContainerDir>
+      <HostDir>/mnt/user/appdata/emoncms/phpfina</HostDir>
+      <ContainerDir>/var/opt/emoncms/phpfina</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/emoncms/emoncms</HostDir>
-      <ContainerDir>/var/opt/emoncms</ContainerDir>
+      <HostDir>/mnt/user/appdata/emoncms/phptimeseries</HostDir>
+      <ContainerDir>/var/opt/emoncms/phptimeseries</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
