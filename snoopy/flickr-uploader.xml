@@ -36,5 +36,5 @@
   </Data>
   <WebUI></WebUI>
   <Banner>http://www.winona.edu/Images/flickr_banner-519.jpg</Banner>
-  <Icon>http://acuril.uprrp.edu/images/Images/logos/flickr.png</Icon>
+  <Icon>https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/flickr-logo-png-8766.png</Icon>
 </Container>
