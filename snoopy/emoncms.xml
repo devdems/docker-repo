@@ -15,9 +15,73 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
-    <Variable>
-      <Name>MYSQL_PASSWORD</Name>
+	<Variable>
+      <Name>MYSQL_HOST</Name>
+      <Value></Value>
+    </Variable>
+	<Variable>
+      <Name>MYSQL_PORT</Name>
+      <Value>3306</Value>
+    </Variable>
+	<Variable>
+      <Name>MYSQL_USER</Name>
       <Value>emoncms</Value>
+    </Variable>
+	<Variable>
+      <Name>MYSQL_PASSWORD</Name>
+      <Value></Value>
+    </Variable>
+	<Variable>
+      <Name>MYSQL_DATABASE</Name>
+      <Value>emoncms</Value>
+    </Variable>
+	<Variable>
+      <Name>MYSQL_RANDOM_ROOT_PASSWORD</Name>
+      <Value>yes</Value>
+    </Variable>
+	<Variable>
+      <Name>REDIS_ENABLED</Name>
+      <Value>false</Value>
+    </Variable>
+	<Variable>
+      <Name>REDIS_HOST</Name>
+      <Value>127.0.0.1</Value>
+    </Variable>
+	<Variable>
+      <Name>REDIS_PORT</Name>
+      <Value>6379</Value>
+    </Variable>
+	<Variable>
+      <Name>REDIS_PREFIX</Name>
+      <Value>'emoncms'</Value>
+    </Variable>
+	<Variable>
+      <Name>MQTT_ENABLED</Name>
+      <Value>false</Value>
+    </Variable>
+	<Variable>
+      <Name>MQTT_HOST</Name>
+      <Value>127.0.0.1</Value>
+    </Variable>
+	<Variable>
+      <Name>MQTT_USER</Name>
+      <Value>mqtt</Value>
+    </Variable>
+	<Variable>
+      <Name>MQTT_PASSWORD</Name>
+      <Value>mqtt</Value>
+    </Variable>
+	<Variable>
+      <Name>MQTT_BASETOPIC</Name>
+      <Value>emon</Value>
+    </Variable>
+	<Variable>
+      <Name>PHPFINA_DIR</Name>
+      <Value>/var/opt/emoncms/phpfina/</Value>
+    </Variable>
+	<Variable>
+      <Name>PHPTIMESERIES_DIR</Name>
+      <Value>/var/opt/emoncms/phptimeseries/</Value>
     </Variable>
   </Environment>
   <Networking>
@@ -25,38 +89,11 @@
 	<Publish>
 	  <Port>
         <HostPort>8998</HostPort>
-        <ContainerPort>8080</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-	  <Port>
-        <HostPort>3307</HostPort>
-        <ContainerPort>3306</ContainerPort>
+        <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/emoncms/mysql</HostDir>
-      <ContainerDir>/var/lib/mysql</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/emoncms/data</HostDir>
-      <ContainerDir>/data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/emoncms/phpfina</HostDir>
-      <ContainerDir>/var/opt/emoncms/phpfina</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/emoncms/phptimeseries</HostDir>
-      <ContainerDir>/var/opt/emoncms/phptimeseries</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
   <WebUI>http://[IP]:[PORT:8998]/</WebUI>
   <Banner>http://emoncms.org/Modules/site/emoncms_front.png</Banner>
   <Icon>http://emoncms.org/Modules/site/emoncms_front.png</Icon>
