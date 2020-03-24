@@ -14,8 +14,8 @@
   <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=FDMP56NCG5A26&amp;source=url</DonateLink>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment>
-	<Variable>
+  <Environment>     
+    <Variable>
       <Name>MYSQL_HOST</Name>
       <Value></Value>
     </Variable>
@@ -88,12 +88,29 @@
     <Mode>bridge</Mode>
 	<Publish>
 	  <Port>
-        <HostPort>8998</HostPort>
-        <ContainerPort>80</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
+		<HostPort>8998</HostPort>
+		<ContainerPort>80</ContainerPort>
+		<Protocol>tcp</Protocol>
+           </Port>
+	   <Port>
+		<HostPort>1883</HostPort>
+		<ContainerPort>1883</ContainerPort>
+		<Protocol>tcp</Protocol>
+           </Port>
     </Publish>
   </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/emoncms/phpfina</HostDir>
+      <ContainerDir>/var/opt/emoncms/phpfina/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/emoncms/phptimeseries/phpfina</HostDir>
+      <ContainerDir>/var/opt/emoncms/phptimeseries/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <WebUI>http://[IP]:[PORT:8998]/</WebUI>
   <Banner>http://emoncms.org/Modules/site/emoncms_front.png</Banner>
   <Icon>http://emoncms.org/Modules/site/emoncms_front.png</Icon>
