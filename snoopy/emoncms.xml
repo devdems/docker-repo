@@ -8,7 +8,7 @@
   <Overview>Energy monitor</Overview>
   <Description></Description>
   <Registry>https://registry.hub.docker.com/u/snoopy86/emoncms-docker</Registry>
-  <Repository>openenergymonitor/emoncms</Repository>
+  <Repository>snoopy86/emoncms-docker</Repository>
   <DonateText>Buy me a beer.</DonateText>
   <DonateImg>https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif</DonateImg>
   <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=FDMP56NCG5A26&amp;source=url</DonateLink>
