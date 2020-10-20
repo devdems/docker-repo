@@ -5,6 +5,19 @@
   <Overview>
     A Docker container designed to watch a directory and encode media files.
   </Overview>
+  <Description>
+    A Docker container designed to watch a directory and encode media files.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/watch[/b] : set this path to the watch folder[br]
+    [b]/output[/b] : set this path to output folder[br]
+    [b]/copy[/b] : set this path to folder where you wish that original files are copied[br]
+    [b]$output_format[/b] : set new file format for your encoded file[br]
+    [b]$parameters[/b] : define parameters for ffmpeg[br]
+    Parameters are defined like this: ffmpeg -i input_dir/file.avi[br]
+    file.$output_format[br]
+    $parameters[br]
+    They need to be separated by ; as delimiter.
+  </Description>
   <Registry>https://registry.hub.docker.com/u/snoopy86/ffmpeg/</Registry>
   <Repository>snoopy86/ffmpeg</Repository>
   <Privileged>false</Privileged>
