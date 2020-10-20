@@ -1,66 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
-<Beta>False</Beta>
-<Date>2020-10-20</Date>
-<Category>Productivity: Tools:</Category>
+<?xml version="1.0"?>
+<Container version="2">
   <Name>FFmpeg</Name>
-  <Overview>
-    A Docker container designed to watch a directory and encode media files.
-  </Overview>
-  <Description>
-    A Docker container designed to watch a directory and encode media files.[br][br]
-    [b][span style='color: #E80000;']Directions:[/span][/b][br]
-    [b]/watch[/b] : set this path to the watch folder[br]
-    [b]/output[/b] : set this path to output folder[br]
-    [b]/copy[/b] : set this path to folder where you wish that original files are copied[br]
-    [b]$output_format[/b] : set new file format for your encoded file[br]
-    [b]$parameters[/b] : define parameters for ffmpeg[br]
-    Parameters are defined like this: ffmpeg -i input_dir/file.avi[br]
-    file.$output_format[br]
-    $parameters[br]
-    They need to be separated by ; as delimiter.
-  </Description>
-  <Registry>https://registry.hub.docker.com/u/snoopy86/ffmpeg/</Registry>
   <Repository>snoopy86/ffmpeg</Repository>
-  <Support>https://lime-technology.com/forum/index.php?topic=43610.0</Support>
-  <DonateText>Buy me a beer.</DonateText>
-  <DonateImg>https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif</DonateImg>
-  <DonateLink>https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=FDMP56NCG5A26&amp;source=url</DonateLink>
-  <BindTime>true</BindTime>
+  <Registry>https://hub.docker.com/r/snoopy86/ffmpeg/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Environment/>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish/>
-  </Networking>
-  <Environment>
-    <Variable>
-      <Name>parameters</Name>
-      <Value>-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Value>
-    </Variable>
-    <Variable>
-      <Name>output_format</Name>
-      <Value>mkv</Value>
-    </Variable>
-  </Environment>
-  <Data>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/watch</ContainerDir>
-      <Mode>r</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/output</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir></HostDir>
-      <ContainerDir>/copy</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Version></Version>
-  <Banner>https://trac.ffmpeg.org/ffmpeg-logo.png</Banner>
+  <Support>https://lime-technology.com/forum/index.php?topic=43610.0</Support>
+  <Project>https://ffmpeg.org/</Project>
+  <Overview>A FFmpeg docker container designed to watch a directory and encode media files.</Overview>
+  <Category>Tools:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/snoopy86/docker-repo/master/snoopy/ffmpeg.xml</TemplateURL>
   <Icon>https://ih1.redbubble.net/image.998316046.6121/pp,840x830-pad,1000x1000,f8f8f8.jpg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText>For my retirement</DonateText>
+  <DonateLink>https://www.paypal.com/donate?hosted_button_id=4SCY7WSZPA6UQ</DonateLink>
+  <Description>FFmpeg. A complete, cross-platform solution to record, convert and stream audio and video.</Description>
+  <Config Name="Watch" Target="/watch" Default="" Mode="r" Description="Watch" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Output" Target="/output" Default="" Mode="rw" Description="Output" Type="Path" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Copy" Target="/copy" Default="" Mode="rw" Description="Copy" Type="Path" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Parameters" Target="parameters" Default="-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k" Mode="" Description="Parameters for FFmpeg" Type="Variable" Display="always" Required="true" Mask="false">-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Config>
+  <Config Name="Output format" Target="output_format" Default="mkv" Mode="" Description="Format of output file." Type="Variable" Display="always" Required="true" Mask="false">mkv</Config>
 </Container>
