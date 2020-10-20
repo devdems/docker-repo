@@ -14,7 +14,7 @@
   <DonateLink>https://www.paypal.com/donate?hosted_button_id=4SCY7WSZPA6UQ</DonateLink>
   <Icon>https://ih1.redbubble.net/image.998316046.6121/pp,840x830-pad,1000x1000,f8f8f8.jpg</Icon> 
   <Network Default="host">bridge</Network>
-  <Config Name="Watch" Target="/watch" Default="" Mode="r" Description="Watch" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Watch" Target="/watch" Default="" Mode="ro" Description="Watch" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Output" Target="/output" Default="" Mode="rw" Description="Output" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Copy" Target="/copy" Default="" Mode="rw" Description="Copy" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Parameters" Target="parameters" Default="-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k" Mode="" Description="Parameters for FFmpeg" Type="Variable" Display="always" Required="true" Mask="false">-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Config>
