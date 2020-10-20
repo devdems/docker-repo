@@ -26,6 +26,9 @@
   <DonateText>Buy me a beer.</DonateText>
   <DonateImg>https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif</DonateImg>
   <DonateLink>https://www.paypal.com/donate?hosted_button_id=4SCY7WSZPA6UQ</DonateLink>
+  <Version></Version>
+  <Banner>https://trac.ffmpeg.org/ffmpeg-logo.png</Banner>
+  <Icon>https://ih1.redbubble.net/image.998316046.6121/pp,840x830-pad,1000x1000,f8f8f8.jpg</Icon>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
@@ -60,7 +63,10 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Version></Version>
-  <Banner>https://trac.ffmpeg.org/ffmpeg-logo.png</Banner>
-  <Icon>https://ih1.redbubble.net/image.998316046.6121/pp,840x830-pad,1000x1000,f8f8f8.jpg</Icon>
+  <Labels/>
+  <Config Name="Watch" Target="/watch" Default="" Mode="r" Description="Watch" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Output" Target="/output" Default="" Mode="rw" Description="Output" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Copy" Target="/copy" Default="" Mode="rw" Description="Copy" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Parameters" Target="parameters" Default="-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k" Mode="" Description="Parameters for FFmpeg" Type="Variable" Display="always" Required="true" Mask="false">-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Config>
+  <Config Name="Output format" Target="output_format" Default="mkv" Mode="" Description="Format of output file." Type="Variable" Display="always" Required="true" Mask="false">mkv</Config>
 </Container>
