@@ -36,56 +36,12 @@
     <Mode>bridge</Mode>
     <Publish/>
   </Networking>
-  <Environment>
-    <Variable>
-      <Name>Parameters</Name>
-	  <Target>parameters</Target>
-      <Value>-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Value>
-	  <Default>-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Default>
-	  <Description>Parameters for FFmpeg</Description>
-	  <Display>always</Display>
-      <Required>true</Required>
-	  <Mask>false</Mask>
-    </Variable>
-    <Variable>
-	  <Name>Output format</Name>
-      <Target>output_format</Target>
-      <Value>mkv</Value>
-	   <Default>mkv</Default>
-	  <Description>Format of output file</Description>
-	  <Display>always</Display>
-      <Required>true</Required>
-	  <Mask>false</Mask>
-    </Variable>
-  </Environment>
-  <Data>
-    <Volume>
-      <Name>Watch</Name>
-      <HostDir></HostDir>
-      <ContainerDir>/watch</ContainerDir>
-      <Mode>ro</Mode>
-      <Display>always</Display>
-      <Required>true</Required>
-	  <Mask>false</Mask>
-    </Volume>
-    <Volume>
-      <Name>Output</Name>
-      <HostDir></HostDir>
-      <ContainerDir>/output</ContainerDir>
-      <Mode>rw</Mode>
-      <Display>always</Display>
-      <Required>true</Required>
-	  <Mask>false</Mask>
-    </Volume>
-    <Volume>
-      <Name>Copy</Name>
-      <HostDir></HostDir>
-      <ContainerDir>/copy</ContainerDir>
-      <Mode>rw</Mode>
-      <Display>always</Display>
-      <Required>false</Required>
-	  <Mask>false</Mask>
-    </Volume>
-  </Data>
   <Labels/>
+  <Config Name="Watch" Target="/watch" Default="" Mode="r" Description="Watch" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Output" Target="/output" Default="" Mode="rw" Description="Output" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Copy" Target="/copy" Default="" Mode="rw" Description="Copy" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Parameters" Target="parameters" Default="-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k" Mode="" Description="Parameters for FFmpeg" Type="Variable" Display="always" Required="true" Mask="false">-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Config>
+  <Config Name="Output format" Target="output_format" Default="mkv" Mode="" Description="Format of output file." Type="Variable" Display="always" Required="true" Mask="false">mkv</Config>
+</Container>
+
 </Container>
