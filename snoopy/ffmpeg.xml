@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
 <Beta>False</Beta>
-<Date>2020-10-19</Date>
+<Date>2020-10-20</Date>
 <Category>Productivity: Tools:</Category>
   <Name>FFmpeg</Name>
   <Overview>
@@ -10,7 +10,6 @@
   <Description>
     A Docker container designed to watch a directory and encode media files.[br][br]
     [b][span style='color: #E80000;']Directions:[/span][/b][br]
-    [b]/config[/b] : this path is used to store the configuration[br]
     [b]/watch[/b] : set this path to the watch folder[br]
     [b]/output[/b] : set this path to output folder[br]
     [b]/copy[/b] : set this path to folder where you wish that original files are copied[br]
@@ -19,6 +18,7 @@
     Parameters are defined like this: ffmpeg -i input_dir/file.avi[br]
     file.$output_format[br]
     $parameters[br]
+    They need to be separated by ; as delimiter.
   </Description>
   <Registry>https://registry.hub.docker.com/u/snoopy86/ffmpeg/</Registry>
   <Repository>snoopy86/ffmpeg</Repository>
@@ -33,12 +33,17 @@
     <Mode>bridge</Mode>
     <Publish/>
   </Networking>
+  <Environment>
+    <Variable>
+      <Name>parameters</Name>
+      <Value>-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Value>
+    </Variable>
+    <Variable>
+      <Name>output_format</Name>
+      <Value>mkv</Value>
+    </Variable>
+  </Environment>
   <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/ffmpeg</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
     <Volume>
       <HostDir></HostDir>
       <ContainerDir>/watch</ContainerDir>
@@ -55,16 +60,6 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Environment>
-    <Variable>
-      <Name>parameters</Name>
-      <Value></Value>
-    </Variable>
-    <Variable>
-      <Name>output_format</Name>
-      <Value></Value>
-    </Variable>
-  </Environment>
   <Version></Version>
   <Banner>https://trac.ffmpeg.org/ffmpeg-logo.png</Banner>
   <Icon>https://trac.ffmpeg.org/ffmpeg-logo.png</Icon>
