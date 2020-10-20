@@ -61,9 +61,8 @@
   <Data>
     <Volume>
       <Name>Watch</Name>
-	  <Target>/watch</Target>
-      <Value></Value>
-	  <Default></Default>
+      <HostDir></HostDir>
+      <ContainerDir>/watch</ContainerDir>
       <Mode>ro</Mode>
       <Display>always</Display>
       <Required>true</Required>
@@ -71,9 +70,8 @@
     </Volume>
     <Volume>
       <Name>Output</Name>
-	  <Target>/output</Target>
-      <Value></Value>
-	  <Default></Default>
+      <HostDir></HostDir>
+      <ContainerDir>/output</ContainerDir>
       <Mode>rw</Mode>
       <Display>always</Display>
       <Required>true</Required>
@@ -81,9 +79,8 @@
     </Volume>
     <Volume>
       <Name>Copy</Name>
-	  <Target>/copy</Target>
-      <Value></Value>
-	  <Default></Default>
+      <HostDir></HostDir>
+      <ContainerDir>/copy</ContainerDir>
       <Mode>rw</Mode>
       <Display>always</Display>
       <Required>false</Required>
