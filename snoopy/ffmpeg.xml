@@ -13,10 +13,18 @@
     [b]/copy[/b] : set this path to folder where you wish that original files are copied[br]
     [b]$output_format[/b] : set new file format for your encoded file[br]
     [b]$parameters[/b] : define parameters for ffmpeg[br]
-    Parameters are defined like this: ffmpeg -i input_dir/file.avi[br]
-    file.$output_format[br]
-    $parameters[br]
-    They need to be separated by ; as delimiter.
+    ### FFmpeg (-e script='encode.sh')[br]
+    Parameters if ffmpeg is used are defined like this: [br]
+    ffmpeg -i input_dir/file.avi \[br]
+      file.`$output_format` \[br]
+      `$parameters`[br][br]
+    Parameters need to be seperated by ; as delimiter.[br]
+    Example: -map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k[br][br]
+    ### mkvdts2ac3 (-e script='mkvdts2ac3.sh')[br]
+    Parameters if mkvdts2ac3 is used are defined like this:[br]
+    mkvdts2ac3.sh $mkvdts2ac3_params[br][br]
+    Parameters need to be seperated by ; as delimiter.[br]
+    Example: --compress none;-d;-n;-w /output;--new[br]
   </Description>
   <Registry>https://registry.hub.docker.com/u/snoopy86/ffmpeg/</Registry>
   <Repository>snoopy86/ffmpeg</Repository>
@@ -30,6 +38,8 @@
   <Config Name="Watch" Target="/watch" Default="" Mode="ro" Description="Watch" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Output" Target="/output" Default="" Mode="rw" Description="Output" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Copy" Target="/copy" Default="" Mode="rw" Description="Copy" Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Parameters" Target="parameters" Default="-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k" Mode="" Description="Parameters for FFmpeg" Type="Variable" Display="always" Required="true" Mask="false">-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Config>
-  <Config Name="Output format" Target="output_format" Default="mkv" Mode="" Description="Format of output file." Type="Variable" Display="always" Required="true" Mask="false">mkv</Config>
+  <Config Name="Script to be executed" Target="script" Default="encode.sh" Mode="" Description="encode.sh or mkvdts2ac3.sh" Type="Variable" Display="always" Required="true" Mask="false">encode.sh</Config>
+  <Config Name="Parameters" Target="parameters" Default="-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k" Mode="" Description="Parameters for FFmpeg" Type="Variable" Display="always" Required="false" Mask="false">-map 0;-vcodec copy;-scodec copy;-acodec ac3;-b:a 640k</Config>
+  <Config Name="Output format" Target="output_format" Default="mkv" Mode="" Description="Format of output file." Type="Variable" Display="always" Required="false" Mask="false">mkv</Config>
+  <Config Name="mkvdts2ac3 parameters" Target="output_format" Default="--compress none;-d;-n;-w /output;--new" Mode="" Description="Parameters for mkvdts2ac3" Type="Variable" Display="always" Required="false" Mask="false">--compress none;-d;-n;-w /output;--new</Config>
 </Container>
