@@ -36,7 +36,7 @@
   <Icon>https://ih1.redbubble.net/image.998316046.6121/pp,840x830-pad,1000x1000,f8f8f8.jpg</Icon> 
   <Network Default="host">bridge</Network>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/ffmpeg" Mode="rw" Description="Config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/ffmpeg</Config>
-  <Config Name="Watch" Target="/watch" Default="" Mode="ro" Description="Watch" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Watch" Target="/watch" Default="" Mode="rw" Description="Watch" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Output" Target="/output" Default="" Mode="rw" Description="Output" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Copy" Target="/copy" Default="" Mode="rw" Description="Copy" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Script to be executed" Target="script" Default="encode.sh" Mode="" Description="encode.sh or mkvdts2ac3.sh" Type="Variable" Display="always" Required="true" Mask="false">encode.sh</Config>
