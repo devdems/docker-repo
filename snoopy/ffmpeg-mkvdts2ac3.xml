@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
 <Category>Productivity: Tools:</Category>
-  <Name>FFmpeg</Name>
+  <Name>FFmpeg-mkvdts2ac3</Name>
   <Overview>
     A Docker container designed to watch a directory and encode media files.
   </Overview>
